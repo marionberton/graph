@@ -1,7 +1,7 @@
 
 export const donutChartData = [
-  { measure: 'To Do', number: 11 },
-  { measure: 'Overdue', number: 2 },
-  { measure: 'In Progress', number: 51 },
-  { measure: 'Total Done', number: 45 },
+  { group: 'To Do', measure: 11 },
+  { group: 'Overdue', measure: 2 },
+  { group: 'In Progress', measure: 51 },
+  { group: 'Total Done', measure: 45 },
 ];
