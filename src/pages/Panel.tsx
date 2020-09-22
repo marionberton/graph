@@ -32,7 +32,7 @@ export const Panel = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-between content-center pt-12">
+      <div className="flex justify-between content-center  pt-12">
         <Graph />
 
         <Days />

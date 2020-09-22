@@ -21,13 +21,15 @@ const Graph = () => {
     .scaleOrdinal(d3.schemeCategory10);
 
   const slices = pieSlicesData.map((pieSliceData, index) => (
-    // console.log('data', pieSliceData.value);
+    //console.log('data', pieSliceData);
+
     //console.log('CS', colorScale(`col-${index % 10}`));
     // console.log(index % 10);
     <g
       transform={`translate(${width / 2}, ${height / 2})`}
       key={pieSliceData.index}
       onClick={() => onClickSlice(pieSliceData.value)}
+      className="  hover:cursor-pointer"
     >
       <path
         d={
@@ -42,14 +44,21 @@ const Graph = () => {
         fill={colorScale(`col-${index % 10}`)}
         transform="translate(0, 0)"
       />
-      <text x="0" y="-1.5em" textAnchor="middle" fill={'#4a4a4a'}>
-        <tspan dy="1em" className="text-sm font-medium tracking-wider">
-          {selectedCount}
-        </tspan>
-        <tspan dy="1.5em" x="0.1em" fill={'#9b9b9b'} className=" text-xxs">
-          days left
-        </tspan>
-      </text>
+      {selectedCount && (
+        <text x="0" y="-1.5em" textAnchor="middle" fill={'#4a4a4a'}>
+          <tspan dy="1em" className="text-sm  tracking-wider">
+            {selectedCount}
+          </tspan>
+          <tspan
+            dy="1.5em"
+            x="0.1em"
+            fill={'#9b9b9b'}
+            className=" text-xxs font-light"
+          >
+            days left
+          </tspan>
+        </text>
+      )}
     </g>
   ));
 
