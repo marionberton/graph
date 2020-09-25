@@ -15,10 +15,9 @@ const Graph = () => {
   const pieSlicesData = d3.pie()(donutChartData.map((item) => item.measure));
   // console.log(pieSlicesData);
   const colorScale = d3
-    // .scaleOrdinal()
-    // .domain(['To do', 'Overdue', 'In Progress', 'Total done'])
-    // .range(['#ECEEF0', '#EF7365', '#41A2B0', '#2A6183']);
-    .scaleOrdinal(d3.schemeCategory10);
+    .scaleOrdinal(['To do', 'Overdue', 'In Progress', 'Total done'])
+    .range(['#ECEEF0', '#EF7365', '#41A2B0', '#2A6183']);
+    //.scaleOrdinal(d3.schemeCategory10);
 
   const slices = pieSlicesData.map((pieSliceData, index) => (
     //console.log('data', pieSliceData);

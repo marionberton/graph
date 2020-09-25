@@ -2,19 +2,14 @@ import React, { useState } from 'react';
 
 import Graph from '../components/Graph';
 import { Days } from '../components/Days';
+import { Phases } from '../components/Phases';
+
 
 export const Panel = () => {
-  // // React hooks with common state values for all components
-  // const [selectedGroup, setSelectedGroup] = useState('All');
-  // const [groupColour, setGroupColour] = useState('lightgrey');
 
-  // //function that will hook into the state to change it
-  // function updateBarChart(group: any, colour: string) {
-  //   setSelectedGroup(group);
-  //   setGroupColour(colour);
-  // }
   return (
-    <div className=" bg-gray-960 py-12 px-10 w-p420 text-xs">
+    <>
+    <div className=" bg-gray-960 py-12 px-10 w-p420 text-xs rounded-lg">
       <div className="flex flex-row justify-between">
         <div>
           <p className=" text-gray-dark ">Baseline End Date</p>
@@ -38,5 +33,10 @@ export const Panel = () => {
         <Days />
       </div>
     </div>
+  <div className=" bg-gray-960 py-12 px-10 w-p420 text-xs rounded-lg mt-6">
+    <Phases />
+
+  </div>
+      </>
   );
 };
