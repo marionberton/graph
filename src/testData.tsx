@@ -36,7 +36,7 @@ export const demoData: TimelineObject[] = [
     startDate: new Date(2020, 1, 14),
     endDate: new Date(2020, 5, 15),
     totalDays: differenceInDays(new Date(2020, 5, 15), new Date(2020, 1, 14)),
-    completedDays: differenceInDays(new Date(2020, 5, 15), new Date()),
+    completedDays: differenceInDays(new Date(2020, 5, 15), new Date(2020, 1, 14)) - 3,
     overdueDays: 0,
   },
   {
@@ -45,7 +45,7 @@ export const demoData: TimelineObject[] = [
     startDate: new Date(2020, 2, 1),
     endDate: new Date(2020, 2, 15),
     totalDays: differenceInDays(new Date(2020, 2, 15), new Date(2020, 2, 1)),
-    completedDays: differenceInDays(new Date(2020, 2, 15), new Date()),
+    completedDays: differenceInDays(new Date(2020, 2, 15), new Date(2020, 2, 1)),
     overdueDays: 0,
   },
   {
@@ -54,7 +54,7 @@ export const demoData: TimelineObject[] = [
     startDate: new Date(2020, 4, 20),
     endDate: new Date(2020, 6, 25),
     totalDays: differenceInDays(new Date(2020, 6, 25), new Date(2020, 4, 20)),
-    completedDays: differenceInDays(new Date(2020, 6, 25), new Date()),
+    completedDays: differenceInDays(new Date(2020, 6, 25), new Date(2020, 4, 20)),
     overdueDays: 2,
   },
   {
@@ -65,10 +65,10 @@ export const demoData: TimelineObject[] = [
   {
     __typename: TimelineObjectType.phase,
     name: 'Phase 4',
-    startDate: new Date(2020, 3, 10),
-    endDate: new Date(2020, 3, 15),
-    totalDays: differenceInDays(new Date(2020, 3, 15), new Date(2020, 3, 10)),
-    completedDays: differenceInDays(new Date(2020, 3, 15), new Date()),
+    startDate: new Date(2021, 3, 10),
+    endDate: new Date(2021, 3, 15),
+    totalDays: differenceInDays(new Date(2021, 3, 15), new Date(2021, 3, 10)),
+    completedDays: 0,
     overdueDays: 0,
   },
 ];
